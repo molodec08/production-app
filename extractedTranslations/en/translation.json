@@ -13,6 +13,8 @@
   "Something went wrong": {
     "": "Something went wrong."
   },
+  "decrement": "decrement",
+  "increment": "increment",
   "toggle": "toggle",
   "Войти": "",
   "Главная": "Главная",
