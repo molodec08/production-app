@@ -2,13 +2,16 @@
   cursor: pointer;
   color: var(--primary-color);
   padding: 6px 15px;
-  background: none;
-  border: none;
+
+  &:hover {
+    opacity: 0.8;
+    fill-opacity: 0.8;
+    stroke-opacity: 0.8;
+  }
 }
 
-.clear,
-.clearInverted {
-  width: 35px;
+.clear {
+  width: 4vh;
   padding: 0;
   border: none;
   background: none;
@@ -16,7 +19,24 @@
 }
 
 .clearInverted {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
   color: var(--inverted-primary-color);
+}
+
+.default {
+  color: #42526e;
+  background: #091e420a;
+  border: none;
+  border-radius: 3px;
+  padding: 0 10px;
+
+  &:hover {
+    opacity: 1;
+    background: #03091318;
+  }
 }
 
 .outline {
@@ -25,14 +45,22 @@
   background: none;
 }
 
+.outline_red {
+  border: 1px solid var(--red-light);
+  color: var(--red-light);
+  background: none;
+}
+
 .background {
   background: var(--bg-color);
   color: var(--primary-color);
+  border: none;
 }
 
 .backgroundInverted {
   background: var(--inverted-bg-color);
-  color: var(--primary-color);
+  color: var(--inverted-primary-color);
+  border: none;
 }
 
 .square {
@@ -47,13 +75,11 @@
 .square.size_l {
   width: var(--font-line-l);
   height: var(--font-line-l);
-  font: var(--font-l);
 }
 
 .square.size_xl {
   width: var(--font-line-xl);
   height: var(--font-line-xl);
-  font: var(--font-xl);
 }
 
 .size_m {
@@ -66,4 +92,8 @@
 
 .size_xl {
   font: var(--font-xl);
+}
+
+.disabled {
+  opacity: 0.5;
 }

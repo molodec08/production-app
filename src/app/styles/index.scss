@@ -1,9 +1,11 @@
 @import "reset";
-@import "src/app/styles/variables/global";
-@import "src/app/styles/themes/normal";
-@import "src/app/styles/themes/dark";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
+@import "themes/orange";
 
-body {
+.app,
+.app_modal {
   font: var(--font-m);
   color: var(--primary-color);
 }
@@ -15,9 +17,4 @@ body {
 
 .content-page {
   display: flex;
-}
-
-.page-wrapper {
-  flex-grow: 1;
-  padding: 20px;
 }
