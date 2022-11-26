@@ -22,6 +22,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'slashchev-learn-plugin',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -60,6 +61,7 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
+    'slashchev-learn-plugin/path-checker-in-project': 'error',
   },
   globals: {
     __IS_DEV__: true,
