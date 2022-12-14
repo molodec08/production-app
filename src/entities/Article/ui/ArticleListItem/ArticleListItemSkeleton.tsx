@@ -1,13 +1,13 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { Card } from 'shared/ui/Card/Card';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Card } from '@/shared/ui/Card/Card';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { ArticleView } from '../../model/consts/articleConsts';
 import cls from './ArticleListItem.module.scss';
-import { ArticleView } from '../../model/types/article';
 
 interface ArticleListItemSkeletonProps {
-    className?: string;
-    view: ArticleView;
+  className?: string;
+  view: ArticleView;
 }
 
 export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {
