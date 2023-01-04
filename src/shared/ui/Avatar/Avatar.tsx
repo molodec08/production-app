@@ -3,10 +3,10 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps {
-    className?: string;
-    src?: string;
-    size?: number;
-    alt?: string;
+  className?: string;
+  src?: string;
+  size?: number;
+  alt?: string;
 }
 
 export const Avatar = ({

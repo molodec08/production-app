@@ -1,7 +1,6 @@
 import {
   MutableRefObject, useCallback, useEffect, useRef, useState,
 } from 'react';
-import { useTheme } from '@/app/providers/ThemeProvider';
 
 interface UseModalProps {
   onClose?: () => void;
@@ -9,6 +8,12 @@ interface UseModalProps {
   animationDelay: number;
 }
 
+/**
+ * Переиспользуемый хук для модальных компонентов (drawer/modal)
+ * @param animationDelay
+ * @param isOpen
+ * @param onClose
+ */
 export function useModal({
   animationDelay, isOpen, onClose,
 }: UseModalProps) {
