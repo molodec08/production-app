@@ -7,7 +7,7 @@ import { Notification } from '../../model/types/notification';
 
 interface NotificationItemProps {
   className?: string;
-  item: Notification
+  item: Notification;
 }
 
 export const NotificationItem = memo((props: NotificationItemProps) => {

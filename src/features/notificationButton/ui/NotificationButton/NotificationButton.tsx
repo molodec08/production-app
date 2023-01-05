@@ -49,6 +49,5 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
         </Drawer>
       </MobileView>
     </div>
-
   );
 });

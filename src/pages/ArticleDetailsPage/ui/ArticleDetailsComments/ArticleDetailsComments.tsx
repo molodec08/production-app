@@ -44,10 +44,7 @@ export const ArticleDetailsComments = memo(
         <Suspense fallback={<Loader />}>
           <AddCommentForm onSendComment={onSendComment} />
         </Suspense>
-        <CommentList
-          isLoading={commentsIsLoading}
-          comments={comments}
-        />
+        <CommentList isLoading={commentsIsLoading} comments={comments} />
       </VStack>
     );
   },

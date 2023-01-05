@@ -35,14 +35,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
   const [starsCount, setStarsCount] = useState(rate);
   const [feedback, setFeedback] = useState('');
 
-  const onSelectStars = useCallback((selectedStarsCount: number) => {
-    setStarsCount(selectedStarsCount);
-    if (hasFeedback) {
-      setIsModalOpen(true);
-    } else {
-      onAccept?.(selectedStarsCount);
-    }
-  }, [hasFeedback, onAccept]);
+  const onSelectStars = useCallback(
+    (selectedStarsCount: number) => {
+      setStarsCount(selectedStarsCount);
+      if (hasFeedback) {
+        setIsModalOpen(true);
+      } else {
+        onAccept?.(selectedStarsCount);
+      }
+    },
+    [hasFeedback, onAccept],
+  );
 
   const acceptHandle = useCallback(() => {
     setIsModalOpen(false);
@@ -56,9 +59,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
   const modalContent = (
     <>
-      <Text
-        title={feedbackTitle}
-      />
+      <Text title={feedbackTitle} />
       <Input
         value={feedback}
         onChange={setFeedback}
@@ -71,7 +72,11 @@ export const RatingCard = memo((props: RatingCardProps) => {
     <Card className={className} max>
       <VStack align="center" gap="8" max>
         <Text title={starsCount ? t('Спасибо за оценку!') : title} />
-        <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+        <StarRating
+          selectedStars={starsCount}
+          size={40}
+          onSelect={onSelectStars}
+        />
       </VStack>
       <BrowserView>
         <Modal isOpen={isModalOpen} lazy>
@@ -81,9 +86,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
               <Button onClick={cancelHandle} theme={ButtonTheme.OUTLINE_RED}>
                 {t('Закрыть')}
               </Button>
-              <Button onClick={acceptHandle}>
-                {t('Отправить')}
-              </Button>
+              <Button onClick={acceptHandle}>{t('Отправить')}</Button>
             </HStack>
           </VStack>
         </Modal>
