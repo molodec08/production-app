@@ -17,7 +17,7 @@ function isAbsolute(value: string) {
 }
 
 // componentsDirs?.forEach((directory) => {
-//   const indexFilePath = `${directory.getPath()}/index.ts`;
+//   const indexFilePath = `${directory.getPath()}/sort.ts`;
 //   const indexFile = directory.getSourceFile(indexFilePath);
 //
 //   if (!indexFile) {
@@ -30,7 +30,7 @@ function isAbsolute(value: string) {
 
 componentsDirs?.forEach((directory) => {
   const folderName = directory.getPath();
-  const indexFilename = 'index.ts';
+  const indexFilename = 'sort.ts';
   const isIndexFileExist = directory.getSourceFile(`${folderName}/${indexFilename}`);
 
   if (!isIndexFileExist) {
